@@ -15,8 +15,6 @@ function App() {
         <Route path='/register' element={<Register/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/products' element={<Products/>} />
-        {/* <Route path='/users/:userId' element={<UserDetails/>} />
-        <Route path='*' element={<NotFound/>} /> */}
       </Routes>
     </div>
   );

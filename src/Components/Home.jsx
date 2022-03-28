@@ -30,19 +30,14 @@ const Home = () => {
 // token: "39c63ddb96a31b9610cd976b896ad4f0"
 // username: "man"
   return (
-    <div>
-      {
-          {/* userData.map((user) => {
-              return <div>
-                <h1>Your Profile</h1>
-                <h2>Name: {user.name}</h2>
-                <h2>Email: {user.email}</h2>
-                <h2>Mobile: {user.mobile}</h2>
-                <h2>Description: {user.description}</h2>
-              </div>
-          }) */}
-      }
+     <div>
+    <h1>Your Profile</h1>
+    <h2>Name: {userData.name}</h2>
+    <h2>Email: {userData.email}</h2>
+    <h2>Mobile: {userData.mobile}</h2>
+    <h2>Description: {userData.description}</h2>
     </div>
+      
   )
 }
 
