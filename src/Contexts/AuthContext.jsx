@@ -20,6 +20,7 @@ export const AuthContextProvider = ({ children }) => {
 
     const logout = () => {
         setIsAuth(false);
+        navigate('/login')
     };
 
     return <AuthContext.Provider value={{ isAuth, token, username, login, logout }}>{children}</AuthContext.Provider>

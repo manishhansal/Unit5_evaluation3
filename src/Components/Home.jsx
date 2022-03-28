@@ -2,7 +2,7 @@ import React from 'react';
 import { AuthContext } from '../Contexts/AuthContext';
 
 const Home = () => {
-    const { token, username, isAuth } = React.useContext(AuthContext);
+    const { token, username, isAuth, logout } = React.useContext(AuthContext);
     const [userData, setUserData] = React.useState([]);
     // console.log(username)
     // const username = "man"
@@ -29,13 +29,14 @@ const Home = () => {
 // name: "Manish Kumar"
 // token: "39c63ddb96a31b9610cd976b896ad4f0"
 // username: "man"
-  return (
+  return (!isAuth) ? <h1>Home</h1> : (
      <div>
     <h1>Your Profile</h1>
     <h2>Name: {userData.name}</h2>
     <h2>Email: {userData.email}</h2>
     <h2>Mobile: {userData.mobile}</h2>
     <h2>Description: {userData.description}</h2>
+    <button onClick={logout}>Logout</button>
     </div>
       
   )
